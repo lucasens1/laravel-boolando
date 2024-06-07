@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-@include('partials.header')
 
 @section('content')
     <div class="container ms_pt-120">
