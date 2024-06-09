@@ -8,6 +8,12 @@
     <p class="ms_fs-small">{{ $item_desc['brand'] }}</p>
     {{-- Nome --}}
     <p class="fw-semibold">{{ $item_desc['name'] }}</p>
+    {{-- Cuore se tra i favoriti --}}
+    @if (isset($item_desc['isInFavorites']) && $item_desc['isInFavorites'])
+        <span class="ms_favorite liked">&hearts;</span>
+    @else
+        <span class="ms_favorite">&hearts;</span>
+    @endif
     {{-- 
         Uso la direttiva Blade @php che mi permette di creare una finestra di codice php, così da creare flag e discountedPrice 
     --}}
