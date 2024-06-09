@@ -3,6 +3,7 @@ header {
     min-height: 60px;
     background-color: $primary-orange;
     color: white;
+    z-index: 999;
     position: fixed;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.45);
         ul{

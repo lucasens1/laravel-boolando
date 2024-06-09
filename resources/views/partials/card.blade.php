@@ -33,9 +33,17 @@
                 <span class="fw-bold ms_fs-small"> <del>{{ $item_desc['price'] . ' €' }}</del></span>
             </p>
         @endif
+        {{-- Controllo per mettere etichetta discount e tag --}}
+        @if (isset($isDiscounted) && $badge['type'] === 'discount')
+            <span class="ms_discount">{{ $badge['value'] }}</span>
+        @endif
+        @if ($badge['type'] === 'tag')
+            <span class="ms_tag">{{ $badge['value'] }} </span>
+        @endif
     @endforeach
     {{-- Visualizzo il prezzo normale se non è settato discount  --}}
     @if (!isset($isDiscounted))
-        <span class="fw-bold ms_fs-small">{{ $item_desc['price'] . ' €' }}</span>
+        <span class="fw-bold ms_fs-small ms_primary-price">{{ $item_desc['price'] . ' €' }}</span>
     @endif
+
 </div>
