@@ -13,8 +13,16 @@
     }
     img{ 
         width: 100%;
-        &:hover{
-            opacity: 0;
+    }
+    .second-img{
+        display: none;
+    }
+    &:hover{
+        .first-img{
+            display: none;
+        }
+        .second-img{
+            display: block;
         }
     }
 }

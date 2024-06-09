@@ -1,7 +1,9 @@
 <div class="ms_card d-flex flex-column">
 
     {{-- Inserimento dell'immagine --}}
-    <img src="{{ Vite::asset('resources/img/' . $item_desc['frontImage']) }}" alt="">
+    <img src="{{ Vite::asset('resources/img/' . $item_desc['frontImage']) }}" alt="" class="first-img">
+    {{-- Inserimento back img --}}
+    <img src="{{ Vite::asset('resources/img/' . $item_desc['backImage']) }}" alt="" class="second-img">
     {{-- Brand --}}
     <p class="ms_fs-small">{{ $item_desc['brand'] }}</p>
     {{-- Nome --}}
